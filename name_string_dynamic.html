@@ -2,18 +2,38 @@
 <html>
 <head>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style type="text/css">
+        .name, .string{
+            height: 20px;
+            padding-right: 40px;
+            margin-right: 80px;
+        }
+        .wrpr{
+            margin: 20px 0;
+            text-align: center;
+        }
+        .btn-sbmt{
+            background-color: red;
+            color: white;
+            height: 30px;
+            width: 30px;
+        }
+        .cnvs{
+            
+        }
+    </style>
 </head>
 
 <body>
+    <div class="wrpr">
+        <input class="name" type="text" placeholder="Your Name"></input>
+        <input class="string" type="text" placeholder="Random String"></input>
+        <button class="btn-sbmt" type="submit">GO</button>
+    </div>
 
-<input class="name" type="text" placeholder="Your Name"></input>
-<input class="string" type="text" placeholder="Random String"></input>
-<button class="btn-sbmt">GO</button>
+    <canvas id="cnvs" width="1000" height="700" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
 
-<canvas id="cnvs" width="1000" height="700" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
-
-
-<script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
