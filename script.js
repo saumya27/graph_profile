@@ -1,16 +1,21 @@
 // Canvas baic properties
-var $cnvs = document.getElementById("cnvs"),
-context = $cnvs.getContext('2d'),
+var $cnvs = document.getElementById("cnvs");
+$cnvs.width = window.innerWidth - 20;
+$cnvs.height = window.innerHeight - 100 ;
+
+var context = $cnvs.getContext('2d'),
 centerX = $cnvs.width / 2,
 centerY = $cnvs.height / 2;
 
+
+
 // click handler
-$('.btn-sbmt').on('click', function(){    
+$(document).on('click','.btn-sbmt', function(){    
     context.clearRect(0, 0, $cnvs.width, $cnvs.height);
     var $name = $('.name').val().toUpperCase(),
     $string = $('.string').val().toUpperCase(),
     degree = 0,
-    letters =  new Object;
+    letters =  {};
 
     // make the letters and count map
     for(x = 0, length = $string.length; x < length; x++) {
